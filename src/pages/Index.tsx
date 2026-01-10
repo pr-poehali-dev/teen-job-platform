@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -113,12 +114,21 @@ const Index = () => {
               <h1 className="text-2xl font-bold gradient-text">ПодработкаPRO</h1>
             </div>
             <div className="flex items-center gap-3">
-              <Button variant="ghost" size="sm">
-                <Icon name="Bell" size={20} />
-              </Button>
-              <Button variant="ghost" size="sm">
-                <Icon name="Settings" size={20} />
-              </Button>
+              <Link to="/map">
+                <Button variant="ghost" size="sm">
+                  <Icon name="Map" size={20} />
+                </Button>
+              </Link>
+              <Link to="/parent">
+                <Button variant="ghost" size="sm">
+                  <Icon name="Shield" size={20} />
+                </Button>
+              </Link>
+              <Link to="/customer">
+                <Button variant="ghost" size="sm">
+                  <Icon name="Briefcase" size={20} />
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -360,7 +370,6 @@ const Index = () => {
                     <Icon name="Settings" size={18} className="mr-2" />
                     Настройки
                   </Button>
-                </Button>
                 </CardFooter>
               </Card>
 
